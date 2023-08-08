@@ -146,8 +146,8 @@ my_bool querystring_init(UDF_INIT *initid, UDF_ARGS *args, char *message) {
     return 0;
 }
 
-char *querystring_url(UDF_INIT *initid, UDF_ARGS *args, char *result,
-                      unsigned long *length, char *is_null, char *error) {
+char *querystring(UDF_INIT *initid, UDF_ARGS *args, char *result,
+                  unsigned long *length, char *is_null, char *error) {
     if (args->args[0] == nullptr || args->args[1] == nullptr) {
         *is_null = 1;
         return 0;
